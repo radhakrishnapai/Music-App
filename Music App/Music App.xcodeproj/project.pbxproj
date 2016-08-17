@@ -12,6 +12,7 @@
 		0BF0FB011D5DAC7A0041B812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0FAFF1D5DAC7A0041B812 /* Main.storyboard */; };
 		0BF0FB031D5DAC7A0041B812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0FB021D5DAC7A0041B812 /* Assets.xcassets */; };
 		0BF0FB061D5DAC7A0041B812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0FB041D5DAC7A0041B812 /* LaunchScreen.storyboard */; };
+		0BF0FB0E1D5DACD60041B812 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF0FB0D1D5DACD60041B812 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0BF0FB021D5DAC7A0041B812 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BF0FB051D5DAC7A0041B812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BF0FB071D5DAC7A0041B812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BF0FB0D1D5DACD60041B812 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF0FB0E1D5DACD60041B812 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		0BF0FAEF1D5DAC7A0041B812 = {
 			isa = PBXGroup;
 			children = (
+				0BF0FB0D1D5DACD60041B812 /* MediaPlayer.framework */,
 				0BF0FAFA1D5DAC7A0041B812 /* Music App */,
 				0BF0FAF91D5DAC7A0041B812 /* Products */,
 			);

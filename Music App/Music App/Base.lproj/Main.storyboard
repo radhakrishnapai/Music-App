@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Music_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCV-rb-T51">
+                                <rect key="frame" x="39" y="550" width="84" height="30"/>
+                                <state key="normal" title="Show Picker"/>
+                                <connections>
+                                    <action selector="showMediaPicker" destination="BYZ-38-t0r" eventType="touchUpInside" id="0wa-Ev-Mhd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKK-sS-vPp">
+                                <rect key="frame" x="285" y="375" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playOrPauseMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FId-df-Qie"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fk-fI-jvR">
+                                <rect key="frame" x="178" y="375" width="59" height="30"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="skipToPrevious:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHg-4A-XJI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-b9-sOj">
+                                <rect key="frame" x="375" y="375" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="skipToNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNn-TS-VZk"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nqf-3O-ug6">
+                                <rect key="frame" x="18" y="450" width="564" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjk-9B-Y2G">
+                                <rect key="frame" x="20" y="255" width="75" height="30"/>
+                                <state key="normal" title="Shuffle Off"/>
+                                <connections>
+                                    <action selector="shuffleToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uBN-Yk-dv2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-Hv-9Co">
+                                <rect key="frame" x="506" y="255" width="74" height="30"/>
+                                <state key="normal" title="Repeat Off"/>
+                                <connections>
+                                    <action selector="repeatToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVF-3i-ZK3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nqf-3O-ug6" firstAttribute="top" secondItem="WG0-Hv-9Co" secondAttribute="bottom" constant="165" id="5Ra-9D-GVS"/>
+                            <constraint firstItem="MCV-rb-T51" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="6wj-1j-6Ba"/>
+                            <constraint firstItem="MCV-rb-T51" firstAttribute="top" secondItem="Nqf-3O-ug6" secondAttribute="bottom" constant="70" id="BfL-2F-c3Y"/>
+                            <constraint firstItem="Nqf-3O-ug6" firstAttribute="top" secondItem="qjk-9B-Y2G" secondAttribute="bottom" constant="165" id="DDx-BO-bSB"/>
+                            <constraint firstItem="Nqf-3O-ug6" firstAttribute="top" secondItem="2fk-fI-jvR" secondAttribute="bottom" constant="45" id="Mw4-cz-QwD"/>
+                            <constraint firstItem="vKK-sS-vPp" firstAttribute="leading" secondItem="2fk-fI-jvR" secondAttribute="trailing" constant="48" id="OpI-0Q-QKt"/>
+                            <constraint firstItem="Nqf-3O-ug6" firstAttribute="top" secondItem="vKK-sS-vPp" secondAttribute="bottom" constant="45" id="Tf5-3r-2ne"/>
+                            <constraint firstItem="Nqf-3O-ug6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="X3m-fj-Pfg"/>
+                            <constraint firstItem="WG0-Hv-9Co" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YsP-38-WM6"/>
+                            <constraint firstItem="Nqf-3O-ug6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZHT-uN-GIi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MCV-rb-T51" secondAttribute="bottom" constant="20" id="bHj-Hb-e71"/>
+                            <constraint firstItem="zqb-b9-sOj" firstAttribute="leading" secondItem="vKK-sS-vPp" secondAttribute="trailing" constant="60" id="d9d-ij-Shl"/>
+                            <constraint firstItem="qjk-9B-Y2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pZt-wd-5K3"/>
+                            <constraint firstItem="Nqf-3O-ug6" firstAttribute="top" secondItem="zqb-b9-sOj" secondAttribute="bottom" constant="45" id="rYY-FX-OD6"/>
+                            <constraint firstItem="vKK-sS-vPp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ubY-Pb-Hxj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="418" y="272"/>
         </scene>
     </scenes>
 </document>
