@@ -12,6 +12,8 @@ import MediaPlayer
 class ViewController: UIViewController {
     var musicPlayer:MPMusicPlayerController? = nil
     var userMediaItemCollection:MPMediaItemCollection? = nil
+    var nowPlayingTimer:NSTimer? = nil
+    @IBOutlet weak var timeSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,18 +43,35 @@ extension ViewController {
     }
     
     @IBAction func playOrPauseMusic(sender: UIButton) {
-        if musicPlayer?.playbackState == MPMusicPlaybackState.Playing {
-            musicPlayer?.pause()
-            sender.setTitle("Play", forState: UIControlState.Normal)
-        } else {
-            if (musicPlayer?.nowPlayingItem) != nil {
-                musicPlayer?.play()
-            } else {
-                musicPlayer?.setQueueWithQuery(MPMediaQuery.songsQuery())
-                musicPlayer?.play()
-            }
+        
+        if let musicPlayer = musicPlayer {
             
-            sender.setTitle("Pause", forState: UIControlState.Normal)
+            if musicPlayer.playbackState == MPMusicPlaybackState.Playing {
+                musicPlayer.pause()
+                sender.setTitle("Play", forState: UIControlState.Normal)
+            } else {
+                
+                if let nowPlayingItem = musicPlayer.nowPlayingItem {
+                    timeSlider.value = Float(musicPlayer.currentPlaybackTime/nowPlayingItem.playbackDuration)
+                }
+                else {
+                    musicPlayer.setQueueWithQuery(MPMediaQuery.songsQuery())
+                    timeSlider.value = 0.0
+                }
+                
+                nowPlayingTimer = NSTimer.scheduledTimerWithTimeInterval(Double(timeSlider.maximumValue - timeSlider.value), target: self, selector: #selector(ViewController.updateSlider), userInfo: nil, repeats: true)
+                
+                sender.setTitle("Pause", forState: UIControlState.Normal)
+                musicPlayer.play()
+            }
+        }
+    }
+    
+    func updateSlider() {
+        dispatch_async(dispatch_get_main_queue()) { 
+            if let musicPlayer = self.musicPlayer {
+                self.timeSlider.value = Float(musicPlayer.currentPlaybackTime/(musicPlayer.nowPlayingItem?.playbackDuration)!)
+            }
         }
     }
     
@@ -110,17 +129,40 @@ extension ViewController {
         }
     }
     
+    @IBAction func seekBackward(sender: AnyObject) {
+        musicPlayer?.beginSeekingBackward()
+    }
+    
+    @IBAction func seekForward(sender: AnyObject) {
+        musicPlayer?.beginSeekingForward()
+    }
+    
+    @IBAction func endSeeking(sender: AnyObject) {
+        musicPlayer?.endSeeking()
+    }
+    
+    @IBAction func setTimelinePosition(sender: AnyObject) {
+        nowPlayingTimer?.invalidate()
+        dispatch_async(dispatch_get_main_queue()) {
+        if let timeInterval = self.musicPlayer?.nowPlayingItem?.playbackDuration {
+            self.musicPlayer?.currentPlaybackTime = timeInterval * Double(self.timeSlider.value)
+            self.nowPlayingTimer = NSTimer.scheduledTimerWithTimeInterval(Double(self.timeSlider.maximumValue - self.timeSlider.value), target: self, selector: #selector(ViewController.updateSlider), userInfo: nil, repeats: true)
+        }
+        }
+    }
 }
 
 //MARK: Notifications
 
 extension ViewController {
     func registerForMusicPlayerNotifications() {
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: #selector(ViewController.nowPlayingItemDidChangeWithNotification), name: MPMusicPlayerControllerNowPlayingItemDidChangeNotification, object: musicPlayer)
-        notificationCenter.addObserver(self, selector: #selector(ViewController.playbackStateDidChangeWithNotification), name: MPMusicPlayerControllerPlaybackStateDidChangeNotification, object: musicPlayer)
-        notificationCenter.addObserver(self, selector: #selector(ViewController.volumeDidChangeWithNotification), name: MPMusicPlayerControllerVolumeDidChangeNotification, object: musicPlayer)
-        musicPlayer?.beginGeneratingPlaybackNotifications()
+        if let musicPlayer = musicPlayer {
+            let notificationCenter = NSNotificationCenter.defaultCenter()
+            notificationCenter.addObserver(self, selector: #selector(ViewController.nowPlayingItemDidChangeWithNotification), name: MPMusicPlayerControllerNowPlayingItemDidChangeNotification, object: musicPlayer)
+            notificationCenter.addObserver(self, selector: #selector(ViewController.playbackStateDidChangeWithNotification), name: MPMusicPlayerControllerPlaybackStateDidChangeNotification, object: musicPlayer)
+            notificationCenter.addObserver(self, selector: #selector(ViewController.volumeDidChangeWithNotification), name: MPMusicPlayerControllerVolumeDidChangeNotification, object: musicPlayer)
+            musicPlayer.beginGeneratingPlaybackNotifications()
+        }
     }
     
     func unregisterFromMusicPlayerNotifications() {
@@ -132,12 +174,15 @@ extension ViewController {
     }
 
     func nowPlayingItemDidChangeWithNotification(notification:NSNotification) {
+        
     }
     
     func playbackStateDidChangeWithNotification(notification:NSNotification) {
+        
     }
     
     func volumeDidChangeWithNotification(notification:NSNotification) {
+        
     }
 }
 

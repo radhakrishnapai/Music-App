@@ -46,8 +46,11 @@
                                     <action selector="skipToNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNn-TS-VZk"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nqf-3O-ug6">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nqf-3O-ug6">
                                 <rect key="frame" x="18" y="450" width="564" height="31"/>
+                                <connections>
+                                    <action selector="setTimelinePosition:" destination="BYZ-38-t0r" eventType="valueChanged" id="fa0-iE-U3d"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjk-9B-Y2G">
                                 <rect key="frame" x="20" y="255" width="75" height="30"/>
@@ -63,9 +66,32 @@
                                     <action selector="repeatToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVF-3i-ZK3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5d8-rI-ODu">
+                                <rect key="frame" x="375" y="285" width="94" height="30"/>
+                                <state key="normal" title="Seek Forward"/>
+                                <connections>
+                                    <action selector="endSeeking:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="I0F-tT-3Od"/>
+                                    <action selector="endSeeking:" destination="BYZ-38-t0r" eventType="touchDragExit" id="eGG-Yg-9yz"/>
+                                    <action selector="endSeeking:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="gdG-fq-QUa"/>
+                                    <action selector="endSeeking:" destination="BYZ-38-t0r" eventType="touchCancel" id="qDZ-hk-9Mm"/>
+                                    <action selector="seekForward:" destination="BYZ-38-t0r" eventType="touchDown" id="Fcj-m8-NKz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qe-1J-Yat">
+                                <rect key="frame" x="131" y="285" width="106" height="30"/>
+                                <state key="normal" title="Seek Backward"/>
+                                <connections>
+                                    <action selector="endSeeking:" destination="BYZ-38-t0r" eventType="touchDragExit" id="8Lj-Lv-18i"/>
+                                    <action selector="endSeeking:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="B8b-6H-XoS"/>
+                                    <action selector="endSeeking:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="ZKY-A7-vyO"/>
+                                    <action selector="endSeeking:" destination="BYZ-38-t0r" eventType="touchCancel" id="zbF-F1-p0o"/>
+                                    <action selector="seekBackward:" destination="BYZ-38-t0r" eventType="touchDown" id="uaM-fg-pER"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5d8-rI-ODu" secondAttribute="trailing" constant="111" id="1zj-IC-wls"/>
                             <constraint firstItem="Nqf-3O-ug6" firstAttribute="top" secondItem="WG0-Hv-9Co" secondAttribute="bottom" constant="165" id="5Ra-9D-GVS"/>
                             <constraint firstItem="MCV-rb-T51" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="6wj-1j-6Ba"/>
                             <constraint firstItem="MCV-rb-T51" firstAttribute="top" secondItem="Nqf-3O-ug6" secondAttribute="bottom" constant="70" id="BfL-2F-c3Y"/>
@@ -78,11 +104,17 @@
                             <constraint firstItem="Nqf-3O-ug6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZHT-uN-GIi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MCV-rb-T51" secondAttribute="bottom" constant="20" id="bHj-Hb-e71"/>
                             <constraint firstItem="zqb-b9-sOj" firstAttribute="leading" secondItem="vKK-sS-vPp" secondAttribute="trailing" constant="60" id="d9d-ij-Shl"/>
+                            <constraint firstItem="7Qe-1J-Yat" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="111" id="dBi-on-YXf"/>
+                            <constraint firstItem="zqb-b9-sOj" firstAttribute="top" secondItem="5d8-rI-ODu" secondAttribute="bottom" constant="60" id="hBl-tb-06h"/>
                             <constraint firstItem="qjk-9B-Y2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pZt-wd-5K3"/>
+                            <constraint firstItem="2fk-fI-jvR" firstAttribute="top" secondItem="7Qe-1J-Yat" secondAttribute="bottom" constant="60" id="pfM-LI-Gbs"/>
                             <constraint firstItem="Nqf-3O-ug6" firstAttribute="top" secondItem="zqb-b9-sOj" secondAttribute="bottom" constant="45" id="rYY-FX-OD6"/>
                             <constraint firstItem="vKK-sS-vPp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ubY-Pb-Hxj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeSlider" destination="Nqf-3O-ug6" id="aEc-Y0-PeZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
