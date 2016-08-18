@@ -1,11 +1,175 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bM0-VK-lSA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Artists-->
+        <scene sceneID="iVg-hF-VNk">
+            <objects>
+                <viewController storyboardIdentifier="Artists" title="Artists" id="j1e-zN-EUQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5uM-xb-QGY"/>
+                        <viewControllerLayoutGuide type="bottom" id="qMh-xg-Dhz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Chf-vz-xnI">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fD-5H-2I9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-966" y="1713.75"/>
+        </scene>
+        <!--Albums-->
+        <scene sceneID="AB9-Rv-gPz">
+            <objects>
+                <viewController storyboardIdentifier="Albums" title="Albums" id="KyX-K6-tDO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wzF-RG-2gk"/>
+                        <viewControllerLayoutGuide type="bottom" id="xN8-6j-sAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3AC-SK-k2W">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPA-6u-jSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-240" y="1713.75"/>
+        </scene>
+        <!--Songs-->
+        <scene sceneID="V8p-b2-jiC">
+            <objects>
+                <viewController storyboardIdentifier="Songs" title="Songs" id="68G-pk-liC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iqq-UD-6NT"/>
+                        <viewControllerLayoutGuide type="bottom" id="gfg-QX-ajw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dsr-7w-J66">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLr-5j-7Un" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="1713.75"/>
+        </scene>
+        <!--Genres-->
+        <scene sceneID="uHd-P3-fdr">
+            <objects>
+                <viewController storyboardIdentifier="Genres" title="Genres" id="0Bq-RO-D6T" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wxm-dC-OHx"/>
+                        <viewControllerLayoutGuide type="bottom" id="iUk-m3-N8m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dq2-Fj-uVo">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVl-5p-dyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131" y="1713.75"/>
+        </scene>
+        <!--Composers-->
+        <scene sceneID="Zn8-Kn-7Ri">
+            <objects>
+                <viewController storyboardIdentifier="Composers" title="Composers" id="Sf5-LB-qS4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dCo-Sa-GzM"/>
+                        <viewControllerLayoutGuide type="bottom" id="LFR-9j-Ml9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MgX-Zj-gaM">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMp-2p-gcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="1713.75"/>
+        </scene>
+        <!--Compilations-->
+        <scene sceneID="fV9-tb-QbW">
+            <objects>
+                <viewController storyboardIdentifier="Compilations" title="Compilations" id="iSE-ms-wc8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QQG-6h-fdc"/>
+                        <viewControllerLayoutGuide type="bottom" id="T8T-ti-6TP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t4I-fP-peo">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNN-1F-4E4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2520" y="1713.75"/>
+        </scene>
+        <!--Playlists-->
+        <scene sceneID="O4U-nr-ysW">
+            <objects>
+                <viewController id="r1t-NJ-qD2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="249-dq-fEn"/>
+                        <viewControllerLayoutGuide type="bottom" id="eJ8-b5-aUY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Au-qo-BSm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Playlists" image="Playlist" id="vs0-HD-4mg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2D5-Bo-3kI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="832.5"/>
+        </scene>
+        <!--My Music-->
+        <scene sceneID="gNi-9R-tYl">
+            <objects>
+                <viewController title="My Music" id="vgo-BR-Cda" customClass="MyMusicViewController" customModule="Music_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5O8-c2-EhN"/>
+                        <viewControllerLayoutGuide type="bottom" id="eqK-dZ-TWj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Gu-Y9-VwC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Music" image="Music" id="Rvk-85-8WN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLC-YO-hph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="166.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Tag-P0-YTP">
+            <objects>
+                <tabBarController id="bM0-VK-lSA" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="kD4-Jl-psO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vgo-BR-Cda" kind="relationship" relationship="viewControllers" id="z6Z-aq-dRJ"/>
+                        <segue destination="r1t-NJ-qD2" kind="relationship" relationship="viewControllers" id="QSb-1X-tM7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQe-PK-oai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="507.75"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -118,7 +282,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418" y="272"/>
+            <point key="canvasLocation" x="-396" y="-277.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Music" width="50" height="50"/>
+        <image name="Playlist" width="50" height="50"/>
+    </resources>
 </document>
