@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B42F1DE1D75795500C84C0D /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B42F1DD1D75795500C84C0D /* ArtistsViewController.swift */; };
 		0BE77AB01D658A5F00B51DDB /* MyMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE77AAF1D658A5F00B51DDB /* MyMusicViewController.swift */; };
 		0BF0FAFC1D5DAC7A0041B812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0FAFB1D5DAC7A0041B812 /* AppDelegate.swift */; };
 		0BF0FAFE1D5DAC7A0041B812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0FAFD1D5DAC7A0041B812 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B42F1DD1D75795500C84C0D /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
 		0BE77AAF1D658A5F00B51DDB /* MyMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMusicViewController.swift; sourceTree = "<group>"; };
 		0BF0FAF81D5DAC7A0041B812 /* Music App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF0FAFB1D5DAC7A0041B812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				0BF0FAFB1D5DAC7A0041B812 /* AppDelegate.swift */,
 				0BF0FAFD1D5DAC7A0041B812 /* ViewController.swift */,
 				0BE77AAF1D658A5F00B51DDB /* MyMusicViewController.swift */,
+				0B42F1DD1D75795500C84C0D /* ArtistsViewController.swift */,
 				0BF0FAFF1D5DAC7A0041B812 /* Main.storyboard */,
 				0BF0FB021D5DAC7A0041B812 /* Assets.xcassets */,
 				0BF0FB041D5DAC7A0041B812 /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 				0BF0FAFE1D5DAC7A0041B812 /* ViewController.swift in Sources */,
 				0BE77AB01D658A5F00B51DDB /* MyMusicViewController.swift in Sources */,
 				0BF0FAFC1D5DAC7A0041B812 /* AppDelegate.swift in Sources */,
+				0B42F1DE1D75795500C84C0D /* ArtistsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

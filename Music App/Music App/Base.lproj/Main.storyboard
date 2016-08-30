@@ -9,12 +9,13 @@
         <!--Artists-->
         <scene sceneID="iVg-hF-VNk">
             <objects>
-                <viewController storyboardIdentifier="Artists" title="Artists" id="j1e-zN-EUQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Artists" title="Artists" id="j1e-zN-EUQ" customClass="ArtistsViewController" customModule="Music_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5uM-xb-QGY"/>
                         <viewControllerLayoutGuide type="bottom" id="qMh-xg-Dhz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Chf-vz-xnI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -32,6 +33,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xN8-6j-sAv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3AC-SK-k2W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -49,6 +51,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gfg-QX-ajw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dsr-7w-J66">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -66,6 +69,7 @@
                         <viewControllerLayoutGuide type="bottom" id="iUk-m3-N8m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dq2-Fj-uVo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -83,6 +87,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LFR-9j-Ml9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MgX-Zj-gaM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -100,6 +105,7 @@
                         <viewControllerLayoutGuide type="bottom" id="T8T-ti-6TP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t4I-fP-peo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

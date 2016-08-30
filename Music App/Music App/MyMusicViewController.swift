@@ -27,7 +27,8 @@ class MyMusicViewController: UIViewController {
             segmentedViewController.segmentViewHeight = 60.0
             segmentedViewController.selectedSegmentViewHeight = 2.0
             segmentedViewController.selectedSegmentViewColor = UIColor.redColor()
-            segmentedViewController.contentControllers = [artists, albums, songs, genres, composers, compilations]
+            segmentedViewController.segmentShadow = SJShadow.medium()
+            segmentedViewController.segmentControllers = [artists, albums, songs, genres, composers, compilations]
             self.addChildViewController(segmentedViewController)
             self.view.addSubview(segmentedViewController.view)
             segmentedViewController.didMoveToParentViewController(self)
